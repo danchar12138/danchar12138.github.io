@@ -1,0 +1,306 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Danchar's Blog</title><meta name="author" content="Danchar"><meta name="copyright" content="Danchar"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Danchar&#39;s Blog">
+<meta property="og:url" content="https://danchar.top/">
+<meta property="og:site_name" content="Danchar&#39;s Blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/qqhead.jpg">
+<meta property="article:author" content="Danchar">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/qqhead.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Danchar's Blog",
+  "alternateName": [
+    "danchar.top"
+  ],
+  "url": "https://danchar.top/"
+}</script><link rel="shortcut icon" href="https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/site_img.png"><link rel="canonical" href="https://danchar.top/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const hour = new Date().getHours()
+          const isNight = hour <= 8 || hour >= 22
+          if (theme === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else theme === 'light' ? activateLightMode() : activateDarkMode()
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Danchar\'s Blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      if ($loadingBox.classList.contains('loaded')) return
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+
+  if (document.readyState === 'complete') {
+    preloader.endLoading()
+  } else {
+    window.addEventListener('load', preloader.endLoading)
+    document.addEventListener('DOMContentLoaded', preloader.endLoading)
+    // Add timeout protection: force end after 7 seconds
+    setTimeout(preloader.endLoading, 7000)
+  }
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div class="bg-animation" id="web_bg" style="background: linear-gradient(to bottom, transparent, white, transparent);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/qqhead.jpg" onerror="this.onerror=null;this.src='https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page fixed" id="page-header" style="background-image: url(https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/index_img.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Danchar's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Danchar's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/danchar12138" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://music.163.com/#/artist?id=55522557" target="_blank" title="网易云音乐"><i class="fas fa-music" style="color: #c20c0c;"></i></a><a class="social-icon" href="https://space.bilibili.com/270401050" target="_blank" title="哔哩哔哩"><i class="fas fa-television" style="color: #23c9ed;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/948c8ac0" title="学习♂交流专用帖"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/top_img_2.jpg" onerror="this.onerror=null;this.src='https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/404.jpg'" alt="学习♂交流专用帖"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/948c8ac0" title="学习♂交流专用帖"><i class="fas fa-thumbtack sticky"></i>学习♂交流专用帖</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-12T19:08:02.000Z" title="发表于 2023-11-13 03:08:02">2023-11-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/posts/948c8ac0#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">学习♂交流专用帖欢迎大家在评论区学习♂交流，但请不要发布非健康信息哦~  </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/4242daa4" title="苍穹外卖-day06"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/top_img_9.jpg" onerror="this.onerror=null;this.src='https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/404.jpg'" alt="苍穹外卖-day06"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/4242daa4" title="苍穹外卖-day06">苍穹外卖-day06</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-22T22:21:31.000Z" title="发表于 2023-11-23 06:21:31">2023-11-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/">黑马程序员</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96/">苍穹外卖</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/posts/4242daa4#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">苍穹外卖-day06课程内容 HttpClient 微信小程序开发 微信登录 导入商品浏览功能代码  功能实现：微信登录、商品浏览 微信登录效果图：   商品浏览效果图：   1. HttpClient1.1 介绍HttpClient 是Apache Jakarta Common 下的子项目，可以用来提供高效的、最新的、功能丰富的支持 HTTP 协议的客户端编程工具包，并且它支持 HTTP 协议最新的版本和建议。   HttpClient作用：  发送HTTP请求 接收响应数据  &lt;img src=&quot;https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/image-20221203184623026.png&quot; alt=&quot;image-20221203185149985&quot; style=&quot;zoom:33%;&quot; /&gt;  为什么要在Java程序中发送Http请求？有哪些应用场景呢？ HttpClient应用场景： 当我们在使用扫描支付、查看地图、获取验证码、查看天气等功...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/db4b8b1e" title="苍穹外卖-day05"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/top_img_11.jpg" onerror="this.onerror=null;this.src='https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/404.jpg'" alt="苍穹外卖-day05"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/db4b8b1e" title="苍穹外卖-day05">苍穹外卖-day05</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-22T13:42:35.000Z" title="发表于 2023-11-22 21:42:35">2023-11-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/">黑马程序员</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96/">苍穹外卖</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/posts/db4b8b1e#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">苍穹外卖-day05课程内容 Redis入门 Redis数据类型 Redis常用命令 在Java中操作Redis 店铺营业状态设置  功能实现：营业状态设置 效果图：   选择营业中，客户可在小程序端下单：   选择打烊中，客户无法在小程序端下单：   1. Redis入门1.1 Redis简介Redis是一个基于内存的key-value结构数据库。Redis 是互联网技术领域使用最为广泛的存储中间件。 官网：https://redis.io中文网：https://www.redis.net.cn/ key-value结构存储：  主要特点：  基于内存存储，读写性能高 适合存储热点数据（热点商品、资讯、新闻） 企业应用广泛  Redis是用C语言开发的一个开源的高性能键值对(key-value)数据库，官方提供的数据是可以达到100000+的QPS（每秒内查询次数）。它存储的value类型比较丰富，也被称为结构化的NoSql数据库。 NoSql（Not Only SQL），不仅仅是SQL，泛指非关系型数据库。NoSql数据库并不是要取代关系型数据库，而是关系型数据库的补充。 关...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/ac4cbb88" title="苍穹外卖-day04"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/top_img_2.jpg" onerror="this.onerror=null;this.src='https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/404.jpg'" alt="苍穹外卖-day04"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/ac4cbb88" title="苍穹外卖-day04">苍穹外卖-day04</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-22T13:40:19.000Z" title="发表于 2023-11-22 21:40:19">2023-11-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/">黑马程序员</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96/">苍穹外卖</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/posts/ac4cbb88#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">苍穹外卖-day040.项目实战完成套餐管理模块所有业务功能，包括：  新增套餐 套餐分页查询 删除套餐 修改套餐 起售停售套餐  要求：  根据产品原型进行需求分析，分析出业务规则 设计接口 梳理表之间的关系（分类表、菜品表、套餐表、口味表、套餐菜品关系表） 根据接口设计进行代码实现 分别通过swagger接口文档和前后端联调进行功能测试  1. 新增套餐1.1 需求分析和设计产品原型：   业务规则：  套餐名称唯一 套餐必须属于某个分类 套餐必须包含菜品 名称、分类、价格、图片为必填项 添加菜品窗口需要根据分类类型来展示菜品 新增的套餐默认为停售状态  接口设计（共涉及到4个接口）：  根据类型查询分类（已完成） 根据分类id查询菜品 图片上传（已完成） 新增套餐    数据库设计： setmeal表为套餐表，用于存储套餐的信息。具体表结构如下：    字段名 数据类型 说明 备注    id bigint 主键 自增   name varchar(32) 套餐名称 唯一   category_id bigint 分类id 逻辑外键   price decimal(10,2...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/32282e2b" title="苍穹外卖-day03"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/top_img_7.jpg" onerror="this.onerror=null;this.src='https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/404.jpg'" alt="苍穹外卖-day03"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/32282e2b" title="苍穹外卖-day03">苍穹外卖-day03</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-19T19:33:44.000Z" title="发表于 2023-11-20 03:33:44">2023-11-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/">黑马程序员</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96/">苍穹外卖</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/posts/32282e2b#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">苍穹外卖-day03课程内容 公共字段自动填充 新增菜品 菜品分页查询 删除菜品 修改菜品  功能实现：菜品管理 菜品管理效果图：   1. 公共字段自动填充1.1 问题分析在上一章节我们已经完成了后台系统的员工管理功能和菜品分类功能的开发，在新增员工或者新增菜品分类时需要设置创建时间、创建人、修改时间、修改人等字段，在编辑员工或者编辑菜品分类时需要设置修改时间、修改人等字段。这些字段属于公共字段，也就是也就是在我们的系统中很多表中都会有这些字段，如下：    序号 字段名 含义 数据类型    1 create_time 创建时间 datetime   2 create_user 创建人id bigint   3 update_time 修改时间 datetime   4 update_user 修改人id bigint   而针对于这些字段，我们的赋值方式为： 1). 在新增数据时, 将createTime、updateTime 设置为当前时间, createUser、updateUser设置为当前登录用户ID。 2). 在更新数据时, 将updateTime 设置为当前时间...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/452f1ebd" title="苍穹外卖-day02"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/top_img.jpg" onerror="this.onerror=null;this.src='https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/404.jpg'" alt="苍穹外卖-day02"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/452f1ebd" title="苍穹外卖-day02">苍穹外卖-day02</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-19T18:02:19.000Z" title="发表于 2023-11-20 02:02:19">2023-11-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/">黑马程序员</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96/">苍穹外卖</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/posts/452f1ebd#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">苍穹外卖-day02课程内容 新增员工 员工分页查询 启用禁用员工账号 编辑员工 导入分类模块功能代码  功能实现：员工管理、菜品分类管理。 员工管理效果：   菜品分类管理效果：   1. 新增员工1.1 需求分析和设计1.1.1 产品原型一般在做需求分析时，往往都是对照着产品原型进行分析，因为产品原型比较直观，便于我们理解业务。 后台系统中可以管理员工信息，通过新增员工来添加后台系统用户。 新增员工原型：   当填写完表单信息, 点击”保存”按钮后, 会提交该表单的数据到服务端, 在服务端中需要接受数据, 然后将数据保存至数据库中。 注意事项：  账号必须是唯一的 手机号为合法的11位手机号码 身份证号为合法的18位身份证号码 密码默认为123456  1.1.2 接口设计找到资料–&gt;项目接口文档–&gt;苍穹外卖-管理端接口.html   明确新增员工接口的请求路径、请求方式、请求参数、返回数据。 本项目约定：  管理端发出的请求，统一使用**&#x2F;admin**作为前缀。 用户端发出的请求，统一使用**&#x2F;user**作为前缀。  1.1.3 表设计新...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/dc264f07" title="苍穹外卖-day01"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/top_img_4.jpg" onerror="this.onerror=null;this.src='https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/404.jpg'" alt="苍穹外卖-day01"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/dc264f07" title="苍穹外卖-day01">苍穹外卖-day01</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-18T18:36:32.000Z" title="发表于 2023-11-19 02:36:32">2023-11-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/">黑马程序员</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96/">苍穹外卖</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/posts/dc264f07#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">苍穹外卖-day01课程内容 软件开发整体介绍 苍穹外卖项目介绍 开发环境搭建 导入接口文档 Swagger  项目整体效果展示：   管理端-外卖商家使用    用户端-点餐用户使用  当我们完成该项目的学习，可以培养以下能力：   1. 软件开发整体介绍作为一名软件开发工程师,我们需要了解在软件开发过程中的开发流程， 以及软件开发过程中涉及到的岗位角色，角色的分工、职责， 并了解软件开发中涉及到的三种软件环境。那么这一小节，我们将从 软件开发流程、角色分工、软件环境 三个方面整体介绍一下软件开发。 1.1 软件开发流程  1). 第1阶段: 需求分析 完成需求规格说明书、产品原型编写。 需求规格说明书， 一般来说就是使用 Word 文档来描述当前项目的各个组成部分，如：系统定义、应用环境、功能规格、性能需求等，都会在文档中描述。例如：   产品原型，一般是通过网页(html)的形式展示当前的页面展示什么样的数据, 页面的布局是什么样子的，点击某个菜单，打开什么页面，点击某个按钮，出现什么效果，都可以通过产品原型看到。 例如：   2). 第2阶段: 设计 设计的内容包含 UI...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/5c8f3fae" title="微服务（四）——RabbitMQ"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/top_img_12.jpg" onerror="this.onerror=null;this.src='https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/404.jpg'" alt="微服务（四）——RabbitMQ"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/5c8f3fae" title="微服务（四）——RabbitMQ">微服务（四）——RabbitMQ</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-17T07:55:24.000Z" title="发表于 2023-11-17 15:55:24">2023-11-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/">黑马程序员</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">微服务</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/posts/5c8f3fae#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">RabbitMQ1.初识MQ1.1.同步和异步通讯微服务间通讯有同步和异步两种方式： 同步通讯：就像打电话，需要实时响应。 异步通讯：就像发邮件，不需要马上回复。  两种方式各有优劣，打电话可以立即得到响应，但是你却不能跟多个人同时通话。发送邮件可以同时与多个人收发邮件，但是往往响应会有延迟。 1.1.1.同步通讯我们之前学习的Feign调用就属于同步方式，虽然调用可以实时得到结果，但存在下面的问题：  总结： 同步调用的优点：  时效性较强，可以立即得到结果  同步调用的问题：  耦合度高 性能和吞吐能力下降 有额外的资源消耗 有级联失败问题  1.1.2.异步通讯异步调用则可以避免上述问题： 我们以购买商品为例，用户支付后需要调用订单服务完成订单状态修改，调用物流服务，从仓库分配响应的库存并准备发货。 在事件模式中，支付服务是事件发布者（publisher），在支付完成后只需要发布一个支付成功的事件（event），事件中带上订单id。 订单服务和物流服务是事件订阅者（Consumer），订阅支付成功的事件，监听到事件后完成自己业务即可。 为了解除事件发布者与订阅者之间的耦合，...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/fa3ee1d6" title="微服务（三）——Docker实用篇"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/top_img_7.jpg" onerror="this.onerror=null;this.src='https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/404.jpg'" alt="微服务（三）——Docker实用篇"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/fa3ee1d6" title="微服务（三）——Docker实用篇">微服务（三）——Docker实用篇</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-16T00:28:17.000Z" title="发表于 2023-11-16 08:28:17">2023-11-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/">黑马程序员</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">微服务</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/posts/fa3ee1d6#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Docker实用篇1.初识Docker1.1.什么是Docker微服务虽然具备各种各样的优势，但服务的拆分通用给部署带来了很大的麻烦。  分布式系统中，依赖的组件非常多，不同组件之间部署时往往会产生一些冲突。 在数百上千台服务中重复部署，环境不一定一致，会遇到各种问题  1.1.1.应用部署的环境问题大型项目组件较多，运行环境也较为复杂，部署时会碰到一些问题：  依赖关系复杂，容易出现兼容性问题 开发、测试、生产环境有差异   例如一个项目中，部署时需要依赖于node.js、Redis、RabbitMQ、MySQL等，这些服务部署时所需要的函数库、依赖项各不相同，甚至会有冲突。给部署带来了极大的困难。 1.1.2.Docker解决依赖兼容问题而Docker确巧妙的解决了这些问题，Docker是如何实现的呢？ Docker为了解决依赖的兼容问题的，采用了两个手段：  将应用的Libs（函数库）、Deps（依赖）、配置与应用一起打包 将每个应用放到一个隔离容器去运行，避免互相干扰   这样打包好的应用包中，既包含应用本身，也保护应用所需要的Libs、Deps，无需再操作系统上安装这些...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/b7204284" title="微服务（二）——SpringCloud实用篇02"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/top_img_5.jpg" onerror="this.onerror=null;this.src='https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/404.jpg'" alt="微服务（二）——SpringCloud实用篇02"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/b7204284" title="微服务（二）——SpringCloud实用篇02">微服务（二）——SpringCloud实用篇02</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-13T04:10:31.000Z" title="发表于 2023-11-13 12:10:31">2023-11-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/">黑马程序员</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">微服务</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/posts/b7204284#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">SpringCloud实用篇021.Nacos配置管理Nacos除了可以做注册中心，同样可以做配置管理来使用。 1.1.统一配置管理当微服务部署的实例越来越多，达到数十、数百时，逐个修改微服务配置就会让人抓狂，而且很容易出错。我们需要一种统一配置管理方案，可以集中管理所有实例的配置。  Nacos一方面可以将配置集中管理，另一方可以在配置变更时，及时通知微服务，实现配置的热更新。 1.1.1.在nacos中添加配置文件如何在nacos中管理配置呢？  然后在弹出的表单中，填写配置信息：   注意：项目的核心配置，需要热更新的配置才有放到nacos管理的必要。基本不会变更的一些配置还是保存在微服务本地比较好。  1.1.2.从微服务拉取配置微服务要拉取nacos中管理的配置，并且与本地的application.yml配置合并，才能完成项目启动。 但如果尚未读取application.yml，又如何得知nacos地址呢？ 因此spring引入了一种新的配置文件：bootstrap.yaml文件，会在application.yml之前被读取，流程如下：  1）引入nacos-confi...</div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/qqhead.jpg" onerror="this.onerror=null;this.src='https://danchar-oss.oss-cn-chengdu.aliyuncs.com/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Danchar</div><div class="author-info-description">人活着就是为了学习</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/danchar12138/hexo-theme-butterfly"><i class="fab fa-github"></i><span>主题Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/danchar12138" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://music.163.com/#/artist?id=55522557" target="_blank" title="网易云音乐"><i class="fas fa-music" style="color: #c20c0c;"></i></a><a class="social-icon" href="https://space.bilibili.com/270401050" target="_blank" title="哔哩哔哩"><i class="fas fa-television" style="color: #23c9ed;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到Danchar的博客~如果有什么bug可以在评论区反馈！</div></div><div class="sticky_layout"><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="card-category-list-name">博客搭建</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AB%9E%E8%B5%9B%E9%A2%98%E7%9B%AE/"><span class="card-category-list-name">竞赛题目</span><span class="card-category-list-count">5</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AB%9E%E8%B5%9B%E9%A2%98%E7%9B%AE/%E6%B4%9B%E8%B0%B7/"><span class="card-category-list-name">洛谷</span><span class="card-category-list-count">5</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/"><span class="card-category-list-name">黑马程序员</span><span class="card-category-list-count">10</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"><span class="card-category-list-name">微服务</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96/"><span class="card-category-list-name">苍穹外卖</span><span class="card-category-list-count">6</span></a></li></ul></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Hexo/" style="font-size: 1.15em; color: rgb(50, 102, 94);">Hexo</a><a href="/tags/Butterfly/" style="font-size: 1.15em; color: rgb(52, 101, 50);">Butterfly</a><a href="/tags/%E4%BA%8C%E5%88%86/" style="font-size: 1.45em; color: rgb(63, 90, 89);">二分</a><a href="/tags/%E6%B4%9B%E8%B0%B7/" style="font-size: 1.15em; color: rgb(50, 50, 50);">洛谷</a><a href="/tags/%E9%80%92%E6%8E%A8/" style="font-size: 1.45em; color: rgb(97, 100, 71);">递推</a><a href="/tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/" style="font-size: 1.15em; color: rgb(147, 69, 50);">记忆化搜索</a><a href="/tags/%E9%80%92%E5%BD%92/" style="font-size: 1.15em; color: rgb(50, 50, 132);">递归</a><a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 1.15em; color: rgb(105, 50, 50);">字符串</a><a href="/tags/%E9%AB%98%E7%B2%BE%E5%BA%A6/" style="font-size: 1.15em; color: rgb(50, 83, 50);">高精度</a><a href="/tags/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/" style="font-size: 1.15em; color: rgb(50, 57, 98);">斐波那契数列</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/11/">
+            <span class="card-archive-list-date">
+              十一月 2023
+            </span>
+            <span class="card-archive-list-count">17</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">17</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">64.2k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-02-08T16:42:33.793Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2023 - 2026 By Danchar</span></div><div class="footer_custom_text">你所热爱的，就是你的生活。——陈睿</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>(() => {
+  const getCommentUrl = () => {
+    const eleGroup = document.querySelectorAll('#recent-posts .article-title')
+    let urlArray = []
+    eleGroup.forEach(i=>{
+      urlArray.push(i.getAttribute('href'))
+    })
+    return urlArray
+  }
+
+  const getCount = () => {
+    const runTwikoo = () => {
+      twikoo.getCommentsCount({
+        envId: 'https://comments.danchar.top/.netlify/functions/twikoo',
+        region: 'ap-chengdu',
+        urls: getCommentUrl(),
+        includeReply: false
+      }).then(function (res) {
+        document.querySelectorAll('#recent-posts .twikoo-count').forEach((item,index) => {
+          if (res[index]) {
+            item.textContent = res[index].count
+          }
+        })
+      }).catch(function (err) {
+        console.log(err)
+      })
+    }
+
+      if (typeof twikoo === 'object') {
+        runTwikoo()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js').then(runTwikoo)
+      }
+  }
+
+  window.pjax ? getCount() : window.addEventListener('load', getCount)
+
+})()</script><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js@3.0.0/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = [].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      const from = '出自 ' + data.from
+      typedJSFn.processSubtitle(data.hitokoto, [from])
+    })
+    .catch(err => {
+      console.error('Failed to get the Hitokoto API:', err)
+      typedJSFn.processSubtitle([])
+    })
+}
+typedJSFn.run(subtitleType)
+</script></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
